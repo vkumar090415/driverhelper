@@ -1,0 +1,57 @@
+﻿http://www.lumperdispatch.com/webservice/services/get_token
+
+{"pass_key":"DA_test_OAnSOZOoOkaSZJ6Ok3xdWQEt"}
+
+ionic cordova resources
+
+ionic cordova run android
+
+-------------------------------------------------------------------
+http://www.lumperdispatch.com/webservice/services/registration
+
+{
+"auth_key":"AUTH_test_610dcc3a-bd0b-44bd-90bc-b65be6234a77",
+"user_type":"1",
+"name":"vikash kumar",
+"email_id":"vkumar090415@gmail.com",
+"mobile_no":"7605875377",
+"address":"kolkata",
+"location":"kolkata",
+"latitude":"22.5726° N",
+"longitude":"88.3639° E",
+"postal_code":"700064",
+"password":"vkumar123",
+"cnf_password":"vkumar123"
+}
+
+
+public  createUser2(user: User): Observable<User> {
+user.latitude="36.7783° N";
+user.longitude="119.4179° W";
+user.auth_key="AUTH_test_610dcc3a-bd0b-44bd-90bc-b65be6234a77";
+user.user_type=1;
+console.log(user);
+var formData: any = new FormData();
+  formData.append("auth_key", user.auth_key);
+  formData.append("user_type", user.user_type);
+  formData.append("name", user.name);
+  formData.append("email_id", user.email_id);
+  formData.append("mobile_no", user.mobile_no);
+  formData.append("address", user.address);
+  formData.append("location", user.location);
+  formData.append("latitude", user.latitude);
+  formData.append("longitude", user.longitude);
+  formData.append("postal_code", user.postal_code);
+  formData.append("password", user.password);
+  formData.append("cnf_password", user.cnf_password);
+  console.log(formData);
+const headers = { 'content-type': 'multipart/form-data'}  ;
+    return  this.httpClient    
+    .post(this.baseUrl + 'registration', formData, {
+      headers: new HttpHeaders({ "Accept": "application/json" })    
+   
+    .pipe(map(response  => {    
+    return  new  User(response);    
+    }));
+    
+    }

@@ -1,0 +1,24 @@
+ion-item{
+    --background: #ffffff;
+    --color: #000000;
+    padding-bottom: 5px;
+}
+ion-button{
+    --background: #062f77;
+}
+    
+    .avatar {
+       // width: 80px;
+       // height: 80px;
+        position: relative;
+        margin: 0 auto 4px 30%;
+
+        img {
+            display: block;
+            border-radius: 50%;
+            //position: absolute;
+            bottom: calc(-1*(80px + 4px));
+            border: 8px solid #fff;
+            background-color: #fff;
+        }
+    }

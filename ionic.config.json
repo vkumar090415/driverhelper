@@ -1,0 +1,8 @@
+{
+  "name": "driverhelper",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

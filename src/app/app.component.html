@@ -1,0 +1,43 @@
+<ion-app style="background-color: #3880ff;">
+
+  <ion-menu side="start" content-id="main-content">
+
+    <ion-header>
+
+      <!-- <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar> -->
+      <ion-toolbar color="primary">
+        <div class="avatar-menu">
+          <img src="./assets/icon/logo.png">
+        </div>
+        <div class="title-menu">
+          Lumper Dispatch
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list *ngFor="let pages of navigate">
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="pages.url" routerDirection="forward">
+            <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+            {{pages.title}}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+      </ion-toolbar>
+    </ion-header>
+
+  </div>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

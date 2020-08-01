@@ -1,0 +1,44 @@
+#container {
+  text-align: center;
+  --background: #3880ff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+ion-content.background{
+  --background: url(../../assets/img/logo.png) 0 0/100% 100% no-repeat;
+}
+.titleicon {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  text-align:center;
+}
+.title {
+ 
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  text-align:center;
+}
